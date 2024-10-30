@@ -1,0 +1,161 @@
+<html>
+<div align="center">
+<title>Terminal 00</title>
+<head>
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#000000">
+
+<link href="style.css" rel="stylesheet">
+
+<script src="main.js"></script><style>
+a:link {color:#ff0000;}
+a:visited {color:#ff0000;}
+a:hover {color:#c1b492;}
+a:active {color:#ff0000;}
+</style>
+ 
+<STYLE type="text/css">
+      UL { 
+        background:#ff0000; 
+        margin: 40px 10px 10px 10px;
+        padding: 0px 0px 0px 0px;
+        width:800px;
+        box-shadow: 0px 5px 10px #000000;
+      }
+      LI { 
+        background:#000000;
+        margin: 0px 0px 2px 0px;
+        padding: 20px 20px 20px 20px;
+        list-style: none
+      }
+	  </STYLE>
+      
+      <style>
+    #shadow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+	
+	html {
+				height: 100%;
+			}
+			body {
+				background: url(images/00teeth.gif) center;
+				text-align: center;
+				height: 200%;
+				margin: 0;
+			}
+	
+	.bottom {
+                    position: absolute;
+                    z-index: -3;
+				top: 200%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+				h1.die {font-size:43px;
+			font-weight:normal;
+			font-style:normal;
+				}
+  </style>
+      
+      <style type="text/css">
+body {cursor:url("cursor/rrwxx.png")11 11, auto;}
+</style>
+
+<style type="text/css">
+a {cursor:url("cursor/rrwx2x.png")11 11, default;}
+</style>
+
+<style>
+  /* Mozilla based browsers */
+::-moz-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+/* Works in Safari */
+::selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+/* Works in Opera */
+::-o-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+::-ms-selection {
+background-color: rgba(0,0,0,0);
+
+color: #990000;
+}
+
+/* Works in Internet Explorer */
+::-webkit-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+</style>
+<div id="shadow"></div>
+
+<script>
+    function update(e){
+      var x = e.clientX || e.touches[0].clientX;
+      var y = e.clientY || e.touches[0].clientY;
+
+      document.getElementById("shadow").style.background = "radial-gradient(\
+        circle 11vmax at " + x + "px " + y + "px,\
+        rgba(0,0,0,0) 0%,\
+        rgba(0,0,0,.5) 0%,\
+        rgb(0,0,0) 100%\
+      )";
+    }
+    update({clientX: -1000, clientY: -1000});
+
+    document.addEventListener('mousemove',update);
+    document.addEventListener('touchmove',update);
+  </script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79198042-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+ 
+ <BODY>
+  <audio id="autoplay" loop>
+
+    <source src="music/00teeth.mp3" type="audio/mpeg" >
+ </audio> 
+
+<div class="bottom"> <ul><li><font color="#FF0000">
+<h1 class="die">
+﻿Ｃｏｎｓｕｍｅ  ｔｈｅ  <a href="Truth.html" STYLE="TEXT-DECORATION: NONE">﻿﻿Ｔｒｕｔｈ</a>．</h1>
+</ul>
+</div></div>
+        <!--0101010001101000011001010111100100100111011100100110010100100000011001110111001001101111011101110110100101101110011001110010000001101001011011100111001101101001011001000110010100100000011011110110011000100000011011010110010100101110-->
+
+</body>
+</html>

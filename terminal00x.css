@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+a:link { color:#ff0000; }
+a:visited { color:#ff0000; }
+a:hover { color:#c1b492; }
+a:active { color:#ff0000; }
+
+body { cursor: url("cursor/rrwx.png")11 11, auto; }
+a { cursor: url("cursor/rrwx2.png")11 11, default; }
+
+UL { 
+    background:#ff0000; 
+    margin: 40px 10px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    width:800px;
+    box-shadow: 0px 5px 10px #000000;
+}
+LI { 
+    background:#000000;
+    margin: 0px 0px 2px 0px;
+    padding: 20px 20px 20px 20px;
+    list-style: none;
+}
+
+::-moz-selection { /* Mozilla based browsers */
+    background-color: rgba(0,0,0,0);
+    color: #990000;
+}
+::selection { /* Works in Safari */
+    background-color: rgba(0,0,0,0);
+    color: #990000;
+}
+::-o-selection { /* Works in Opera */
+    background-color: rgba(0,0,0,0);
+    color: #990000;
+}
+::-ms-selection { /* Works in Internet Explorer */
+    background-color: rgba(0,0,0,0);
+    color: #990000;
+}
+::-webkit-selection {
+    background-color: rgba(0,0,0,0);
+    color: #990000;
+}

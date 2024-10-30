@@ -1,0 +1,292 @@
+<html>
+<div align="center">
+<title>Terminal 00</title>
+<head>
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#000000">
+
+<link href="style.css" rel="stylesheet">
+
+<script src="main.js"></script><style>
+a:link {color:#ff0000;}
+a:visited {color:#ff0000;}
+a:hover {color:#c1b492;}
+a:active {color:#ff0000;}
+</style>
+ 
+<STYLE type="text/css">
+      UL { 
+        background:#ff0000; 
+        margin: 40px 10px 10px 10px;
+        padding: 0px 0px 0px 0px;
+        width:800px;
+        box-shadow: 0px 5px 10px #000000;
+      }
+      LI { 
+        background:#000000;
+        margin: 0px 0px 2px 0px;
+        padding: 20px 20px 20px 20px;
+        list-style: none
+      }
+	  </STYLE>
+      
+      <style>
+    #shadow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+	
+	html {
+				height: 100%;
+			}
+			body {
+				background-color:#000;
+				text-align: center;
+				height: 600%;
+				margin: 0;
+			}
+	
+	.bottom {
+                    position: absolute;
+                    z-index: -3;
+				top: 600%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+				h1.die {font-size:50px;
+			font-weight:normal;
+			font-style:normal;
+				}
+				.a {
+  				position: absolute;
+    			left: 500px;
+    			top: 500px;
+    			z-index: 6;
+			}
+			.a2 {
+  				position: absolute;
+    			left: 100px;
+    			top: 100px;
+    			z-index: 6;
+			}	
+					.a3 {
+  				position: absolute;
+    			left: 1000px;
+    			top: 1000px;
+    			z-index: 6;
+			}	
+			
+				.a4 {
+  				position: absolute;
+    			left: 1500px;
+    			top: 1500px;
+    			z-index: 6;
+			}
+			
+			.a5 {
+  				position: absolute;
+    			left: 100px;
+    			top: 2700px;
+    			z-index: 6;
+			}
+			
+				.a5 {
+  				position: absolute;
+    			left: 900px;
+    			top: 700px;
+    			z-index: 6;
+			}
+			
+					.a6 {
+  				position: absolute;
+    			left: 1100px;
+    			top: 2300px;
+    			z-index: 6;
+			}
+			
+				.a7 {
+  				position: absolute;
+    			left: 400px;
+    			top: 3300px;
+    			z-index: 6;
+			}
+				.a8 {
+  				position: absolute;
+    			left: 500px;
+    			top: 2700px;
+    			z-index: 6;
+			}
+					.a9 {
+  				position: absolute;
+    			left: 500px;
+    			top: 600px;
+    			z-index: 6;
+			}
+					.a10 {
+  				position: absolute;
+    			left: 0px;
+    			top: 3500px;
+    			z-index: 6;
+			}
+							.a11 {
+  				position: absolute;
+    			left: 100px;
+    			top: 3700px;
+    			z-index: 6;
+			}
+			
+								.a12 {
+  				position: absolute;
+    			left: 440px;
+    			top: 4000px;
+    			z-index: 6;
+			}
+			
+								.a13 {
+  				position: absolute;
+    			left: 660px;
+    			top: 4700px;
+    			z-index: 6;
+			}
+			
+								.a14 {
+  				position: absolute;
+    			left: 1200px;
+    			top: 4300px;
+    			z-index: 6;
+			}
+			
+								.a15 {
+  				position: absolute;
+    			left: 900px;
+    			top: 4800px;
+    			z-index: 6;
+			}
+			
+								.a16 {
+  				position: absolute;
+    			left: 600px;
+    			top: 5200px;
+    			z-index: 6;
+			}
+	
+  </style>
+      
+      <style type="text/css">
+body {cursor:url("cursor/rrwxx.png")11 11, auto;}
+</style>
+
+<style type="text/css">
+a {cursor:url("cursor/rrwx2x.png")11 11, default;}
+</style>
+
+<style>
+  /* Mozilla based browsers */
+::-moz-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+/* Works in Safari */
+::selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+/* Works in Opera */
+::-o-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+::-ms-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+/* Works in Internet Explorer */
+::-webkit-selection {
+background-color: rgba(0,0,0,0);
+color: #990000;
+}
+
+</style>
+<div id="shadow"></div>
+
+<script>
+    function update(e){
+      var x = e.clientX || e.touches[0].clientX;
+      var y = e.clientY || e.touches[0].clientY;
+
+      document.getElementById("shadow").style.background = "radial-gradient(\
+        circle 6vmax at " + x + "px " + y + "px,\
+        rgba(0,0,0,0) 0%,\
+        rgba(0,0,0,.5) 0%,\
+        rgb(0,0,0) 100%\
+      )";
+    }
+    update({clientX: -1000, clientY: -1000});
+
+    document.addEventListener('mousemove',update);
+    document.addEventListener('touchmove',update);
+  </script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79198042-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+ 
+ <BODY>
+ 
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a"/>
+               <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a2"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a3"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a4"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a5"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a6"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a7"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a8"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a9"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a10"/>
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a11"/>
+            <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a12"/>
+
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a13"/>
+
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a14"/>
+
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a15"/>
+
+           <img draggable="false" src="images/linetheinsideswithteeth.gif" class="a16"/>
+          
+       
+
+<div class="bottom"> <ul><li><font color="#FF0000">
+<h1 class="die">
+<a href="00_Teeth.html" STYLE="TEXT-DECORATION: NONE">﻿﻿Ｔｅｅｔｈ．</a></h1>
+</ul>
+</div></div>
+        <!--Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.Teeth. Teeth. Teeth.-->
+
+</body>
+</html>

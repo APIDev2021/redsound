@@ -1,0 +1,400 @@
+<html>
+<body>
+<body onload="blink();">
+<body background="images/222b.gif">
+<div align="center">
+ 
+<TITLE>Terminal 111</TITLE>
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#000000">
+
+<link href="style.css" rel="stylesheet">
+
+<script src="main.js"></script><script type="text/javascript">
+<!--
+var b_timer = null; // blink timer
+var b_on = true; // blink state
+var blnkrs = null; // array of spans
+
+function blink() {
+var tmp = document.getElementsByTagName("span");
+if (tmp) {
+blnkrs = new Array();
+var b_count = 0;
+for (var i = 0; i < tmp.length; ++i) {
+if (tmp[i].className == "blink") {
+blnkrs[b_count] = tmp[i];
+++b_count;
+}
+}
+// time in m.secs between blinks
+// 500 = 1/2 second
+blinkTimer(700);
+}
+}
+
+function blinkTimer(ival) {
+if (b_timer) {
+window.clearTimeout(b_timer);
+b_timer = null;
+}
+blinkIt();
+b_timer = window.setTimeout('blinkTimer(' + ival + ')', ival);
+}
+
+function blinkIt() {
+for (var i = 0; i < blnkrs.length; ++i) {
+if (b_on == true) {
+blnkrs[i].style.visibility = "hidden";
+}
+else {
+blnkrs[i].style.visibility = "visible";
+}
+}
+b_on =!b_on;
+}
+//-->
+</script>
+
+
+<style>
+a:link {color:#666666;}
+a:visited {color:#666666;}
+a:hover {color:#ffffff;}
+a:active {color:#666666;}
+</style>
+ 
+ <style type="text/css">
+body {cursor:url("cursor/hx.png")21 22, auto;}
+</style>
+
+<style type="text/css">
+a {cursor:url("cursor/hx2.png")21 22, default;}
+</style>
+
+<style>
+  /* Mozilla based browsers */
+::-moz-selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Safari */
+::selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Opera */
+::-o-selection {
+background-color: #000000;
+color: #666666;
+}
+::-ms-selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Internet Explorer */
+::-webkit-selection {
+background-color: #000000;
+color: #666666;
+}
+	
+</style>
+ 
+<STYLE type="text/css">
+      UL { 
+        background:#666666; 
+        margin: 40px 10px 10px 10px;
+        padding: 0px 0px 0px 0px;
+        width:800px;
+        box-shadow: 0px 5px 10px #000000;
+      }
+      LI { 
+        background:#000000;
+        margin: 0px 0px 2px 0px;
+        padding: 20px 20px 20px 20px;
+        
+        list-style: none
+      }
+	  </style>
+
+
+<style>
+.a {
+  position: absolute;
+    left: 1400px;
+    top: 200px;
+    z-index: 6;
+}
+
+.a2 {
+  position: absolute;
+    left: 300px;
+    top: 200px;
+    z-index: -5;
+}
+
+
+.a3 {
+  position: absolute;
+    left: 1500px;
+    top: 100px;
+    z-index: 6;
+}
+
+.a4 {
+  position: absolute;
+    left: 200px;
+    top: 100px;
+    z-index: -5;
+}
+
+.a5 {
+  position: absolute;
+    left: 1500px;
+    top: 300px;
+    z-index: 6;
+}
+
+.a6 {
+  position: absolute;
+    left: 200px;
+    top: 300px;
+    z-index: -5;
+}
+
+.a7 {
+  position: absolute;
+    left: 1600px;
+    top: 200px;
+    z-index: 6;
+}
+
+.a8 {
+  position: absolute;
+    left: 100px;
+    top: 200px;
+    z-index: -5;
+}
+
+.b {
+  position: absolute;
+    left: 1400px;
+    top: 950px;
+    z-index: 6;
+}
+
+.b2 {
+  position: absolute;
+    left: 300px;
+    top: 950px;
+    z-index: -5;
+}
+
+
+.b3 {
+  position: absolute;
+    left: 1500px;
+    top: 850px;
+    z-index: 6;
+}
+
+.b4 {
+  position: absolute;
+    left: 200px;
+    top: 850px;
+    z-index: -5;
+}
+
+.b5 {
+  position: absolute;
+    left: 1500px;
+    top: 1050px;
+    z-index: 6;
+}
+
+.b6 {
+  position: absolute;
+    left: 200px;
+    top: 1050px;
+    z-index: -5;
+}
+
+.b7 {
+  position: absolute;
+    left: 1600px;
+    top: 950px;
+    z-index: 6;
+}
+
+.b8 {
+  position: absolute;
+    left: 100px;
+    top: 950px;
+    z-index: -5;
+}
+
+</style>
+
+<script src="snowstorm.js"></script></head>
+<script>
+snowStorm.snowColor = '#ffffff';  
+snowStorm.flakesMax = 10;
+snowStorm.flakesMaxActive = 10;    
+snowStorm.useTwinkleEffect = true; 
+snowStorm.snowStick = false;
+snowStorm.vMaxX = 6;
+snowStorm.vMaxY = 3;
+</script>
+
+
+
+
+   <BODY>
+    <audio id="autoplay" loop>
+
+    <source src="music/Lovely&#32;Village.mp3" type="audio/mpeg" >
+    </audio>
+   
+
+      <br><br><br><br><br>
+      
+        <img draggable="false" src="images/111watcher3.gif" class="a"/>
+       <img draggable="false" src="images/111watcher3.gif" class="a2"/>
+         <img draggable="false" src="images/111watcher3.gif" class="a3"/>
+       <img draggable="false" src="images/111watcher3.gif" class="a4"/>
+       
+         <img draggable="false" src="images/111watcher3.gif" class="a5"/>
+       <img draggable="false" src="images/111watcher3.gif" class="a6"/>
+       
+          <img draggable="false" src="images/111watcher3.gif" class="a7"/>
+       <img draggable="false" src="images/111watcher3.gif" class="a8"/>
+       
+       
+               <img draggable="false" src="images/111watcher3.gif" class="b"/>
+       <img draggable="false" src="images/111watcher3.gif" class="b2"/>
+         <img draggable="false" src="images/111watcher3.gif" class="b3"/>
+       <img draggable="false" src="images/111watcher3.gif" class="b4"/>
+       
+         <img draggable="false" src="images/111watcher3.gif" class="b5"/>
+       <img draggable="false" src="images/111watcher3.gif" class="b6"/>
+       
+          <img draggable="false" src="images/111watcher3.gif" class="b7"/>
+       <img draggable="false" src="images/111watcher3.gif" class="b8"/>
+
+      <UL>
+      <LI class="withborder"><font color="#ffffff">
+      <li>
+      <br>
+
+  <big style="font-size:20"> ﻿﻿Ｔｅｒｍｉｎａｌ  １１１  ｏｎｌｉｎｅ</big><br><br>
+
+
+Ｄｅｔｅｃｔｉｎｇ  ｐｒｏｂｅ  ｓｉｇｎａｔｕｒｅｓ<br><br>
+
+
+Ｒｅｌａｙｉｎｇ  ａｖａｉｌａｂｌｅ  ｄａｔａ．．．<br><br>
+
+
+．．．
+   
+<br>
+
+      <li>
+      </ul>
+    <br><br><br><br><br>    <br><br><br><br><br>       <br><br><br><br><br>
+
+
+      <UL>
+      <LI class="withborder"><font color="#ffffff"><br>
+      
+     
+<LI><LI>
+      
+      
+  
+      ﻿．．．<br><br>
+
+
+ＤＡＴＡ：  ＲＡＭＰＡＮＴ<br><br>
+
+
+ＣｏＳ：  ９８％<br><br>
+
+
+ＴＥＲＭＩＮＡＬ  ＳＴＲＵＣＴＵＲＥ：  （？？？）<br><br>
+
+
+ＣＬＡＳＳ  ０５  ＰＲＯＢＥ：  ［ＩＮＳＵＦＦＩＣＩＥＮＴ］<br><br>
+
+
+ＲＥＣＯＭＭＥＮＤＡＴＩＯＮ：  <a href="http://angusnicneven.com/" STYLE="TEXT-DECORATION: NONE">ＲＥＴＵＲＮ</a><br><br>
+
+
+．．．<br><br>
+
+
+［ＤＥＡＤ  ＥＮＤＳ  ＤＥＴＥＣＴＥＤ］<br><br>
+
+
+ <a href="Terminal_111_Spine.html" STYLE="TEXT-DECORATION: NONE">ＰＲＯＣＥＥＤ？</a><br>
+
+      
+    
+      
+      <LI><LI><br>
+
+      
+        </ul>
+        
+         <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+         <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+         <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+        <br><br><br><br> <br><br><br><br><br> <br><br><br>
+         <br><br><br><br> <br><br><br><br><br> <br><br><br>
+<br><br><br><br> <br><br><br><br><br> <br><br><br>   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+<br><br><br><br> <br><br><br><br><br> <br><br><br>   <br><br><br> <br><br><br>
+<br><br><br><br> <br><br><br><br><br> <br><br><br>
+
+
+
+
+   <UL>
+      <LI class="withborder"><font color="#ffffff"><br>
+
+       <li> <li><LI>
+       
+        <span class="blink"><span style="color:#fffffff"><span style="padding-right:730px">┏</span></span></span><span class="blink"><span style="color:#ffffff">┓</span></span>
+      <a href="white.html" STYLE="TEXT-DECORATION: NONE"> <img draggable="false" src="images/white.png"></a>
+    <span class="blink"><span style="color:#ffffff"><span style="padding-right:730px">┗</span></span></span><span class="blink"><span style="color:#ffffff">┛</span></span>
+       <li> <li><LI>
+      <br>
+
+      </ul>
+   <br><br><br><br> <br><br><br><br><br> <br><br><br>
+
+    <script type="text/javascript">
+//Following function should be called at the end of the page:
+imagerollover()
+</script>
+</body>
+</html>

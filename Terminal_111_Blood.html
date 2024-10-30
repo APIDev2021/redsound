@@ -1,0 +1,1529 @@
+<html>
+<body>
+<body background="images/blood.gif">
+<div align="center">
+ 
+<TITLE>Terminal 111</TITLE>
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#000000">
+
+<link href="style.css" rel="stylesheet">
+
+<script src="main.js"></script><style>
+a:link {color:#666666;}
+a:visited {color:#666666;}
+a:hover {color:#ffffff;}
+a:active {color:#666666;}
+</style>
+ 
+ <style type="text/css">
+body {cursor:url("cursor/hx.png")21 22, auto;}
+</style>
+
+<style type="text/css">
+a {cursor:url("cursor/hx2.png")21 22, default;}
+</style>
+
+<style>
+  /* Mozilla based browsers */
+::-moz-selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Safari */
+::selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Opera */
+::-o-selection {
+background-color: #000000;
+color: #666666;
+}
+::-ms-selection {
+background-color: #000000;
+color: #666666;
+}
+
+/* Works in Internet Explorer */
+::-webkit-selection {
+background-color: #000000;
+color: #666666;
+}
+	
+</style>
+ 
+<STYLE type="text/css">
+      UL { 
+        background:#666666; 
+        margin: 40px 10px 10px 10px;
+        padding: 0px 0px 0px 0px;
+        width:800px;
+        box-shadow: 0px 5px 10px #000000;
+      }
+      LI { 
+        background:#000000;
+        margin: 0px 0px 2px 0px;
+        padding: 20px 20px 20px 20px;
+        
+        list-style: none
+      }
+	  </style>
+
+<style type="text/css">
+.matrix { font-family:Lucida Console, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+</style>
+
+<script type="text/javascript" language="JavaScript">
+
+<!--
+var rows=15; // must be an odd number
+var speed=40; // lower is faster
+var reveal=2; // between 0 and 2 only. The higher, the faster the word appears
+var effectalign="center" //enter "center" to center it.
+
+/***********************************************
+* The Matrix Text Effect- by Richard Womersley (http://www.mf2fm.co.uk/rv)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var w3c=document.getElementById && !window.opera;;
+var ie45=document.all && !window.opera;
+var ma_tab, matemp, ma_bod, ma_row, x, y, columns, ma_txt, ma_cho;
+var m_coch=new Array();
+var m_copo=new Array();
+window.onload=function() {
+	if (!w3c && !ie45) return
+  var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];
+  ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;
+  ma_txt=" "+ma_txt+" ";
+  columns=ma_txt.length;
+  if (w3c) {
+    while (matrix.childNodes.length) matrix.removeChild(matrix.childNodes[0]);
+    ma_tab=document.createElement("table");
+    ma_tab.setAttribute("border", 0);
+    ma_tab.setAttribute("align", effectalign);
+    ma_tab.style.backgroundColor="#transparent";
+    ma_bod=document.createElement("tbody");
+    for (x=0; x<rows; x++) {
+      ma_row=document.createElement("tr");
+      for (y=0; y<columns; y++) {
+        matemp=document.createElement("td");
+        matemp.setAttribute("id", "Mx"+x+"y"+y);
+        matemp.className="matrix";
+        matemp.appendChild(document.createTextNode(String.fromCharCode(160)));
+        ma_row.appendChild(matemp);
+      }
+      ma_bod.appendChild(ma_row);
+    }
+    ma_tab.appendChild(ma_bod);
+    matrix.appendChild(ma_tab);
+  } else {
+    ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#transparent">';
+    for (var x=0; x<rows; x++) {
+      ma_tab+='<t'+'r>';
+      for (var y=0; y<columns; y++) {
+        ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'"> </'+'td>';
+      }
+      ma_tab+='</'+'tr>';
+    }
+    ma_tab+='</'+'table>';
+    matrix.innerHTML=ma_tab;
+  }
+  ma_cho=ma_txt;
+  for (x=0; x<columns; x++) {
+    ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));
+    m_copo[x]=0;
+  }
+  ma_bod=setInterval("mytricks()", speed);
+}
+
+function mytricks() {
+  x=0;
+  for (y=0; y<columns; y++) {
+    x=x+(m_copo[y]==100);
+    ma_row=m_copo[y]%100;
+    if (ma_row && m_copo[y]<100) {
+      if (ma_row<rows+1) {
+        if (w3c) {
+          matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);
+          matemp.firstChild.nodeValue=m_coch[y];
+        }
+        else {
+          matemp=document.all["Mx"+(ma_row-1)+"y"+y];
+          matemp.innerHTML=m_coch[y];
+        }
+        matemp.style.color="666666";
+        matemp.style.fontWeight="bold";
+      }
+      if (ma_row>1 && ma_row<rows+2) {
+        matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];
+        matemp.style.fontWeight="normal";
+        matemp.style.color="#000000";
+      }
+      if (ma_row>2) {
+          matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];
+        matemp.style.color="#000000";
+      }
+      if (ma_row<Math.floor(rows/2)+1) m_copo[y]++;
+      else if (ma_row==Math.floor(rows/2)+1 && m_coch[y]==ma_txt.charAt(y)) zoomer(y);
+      else if (ma_row<rows+2) m_copo[y]++;
+      else if (m_copo[y]<100) m_copo[y]=0;
+    }
+    else if (Math.random()>0.9 && m_copo[y]<100) {
+      m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));
+      m_copo[y]++;
+    }
+  }
+  if (x==columns) clearInterval(ma_bod);
+}
+
+function zoomer(ycol) {
+  var mtmp, mtem, ytmp;
+  if (m_copo[ycol]==Math.floor(rows/2)+1) {
+    for (ytmp=0; ytmp<rows; ytmp++) {
+      if (w3c) {
+        mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);
+        mtmp.firstChild.nodeValue=m_coch[ycol];
+      }
+      else {
+        mtmp=document.all["Mx"+ytmp+"y"+ycol];
+        mtmp.innerHTML=m_coch[ycol];
+      }
+      mtmp.style.color="#a90000";
+      mtmp.style.fontWeight="bold";
+    }
+    if (Math.random()<reveal) {
+      mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));
+      ma_cho=ma_cho.substring(0, mtmp)+ma_cho.substring(mtmp+1, ma_cho.length);
+    }
+    if (Math.random()<reveal-1) ma_cho=ma_cho.substring(0, ma_cho.length-1);
+    m_copo[ycol]+=199;
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+  else if (m_copo[ycol]>200) {
+    if (w3c) {
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);
+      mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);
+    }
+    else {
+      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+    }
+    mtmp.style.fontWeight="normal";
+    mtem.style.fontWeight="normal";
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+  else if (m_copo[ycol]==200) m_copo[ycol]=100+Math.floor(rows/2);
+  if (m_copo[ycol]>100 && m_copo[ycol]<200) {
+    if (w3c) {
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);
+      mtmp.firstChild.nodeValue=String.fromCharCode(160);
+      mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);
+      mtem.firstChild.nodeValue=String.fromCharCode(160);
+    }
+    else {
+      mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];
+      mtmp.innerHTML=String.fromCharCode(160);
+      mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];
+      mtem.innerHTML=String.fromCharCode(160);
+    }
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+}
+// -->
+</script>
+
+<style type="text/css">
+
+/* Circle Text Styles */
+
+#outerCircleText {
+
+/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+
+font-style: italic;
+
+font-weight: bold;
+
+font-family: 'comic sans ms', verdana, arial;
+
+color: #ff0000;
+
+/* End Optional */
+
+
+
+/* Start Required - Do Not Edit */
+
+position: absolute;top: 0;left: 0;z-index: 3000;cursor: cursor/hx.png;}
+
+#outerCircleText div {position: relative;}
+
+#outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+
+/* End Required */
+
+/* End Circle Text Styles */
+
+</style>
+
+<script type="text/javascript">
+
+
+
+/* Circling text trail- Tim Tilton
+
+   Website: http://www.tempermedia.com/
+
+   Visit: http://www.dynamicdrive.com/ for Original Source and tons of scripts
+
+   Modified Here for more flexibility and modern browser support
+
+   Modifications as first seen in http://www.dynamicdrive.com/forums/
+
+   username:jscheuer1 - This notice must remain for legal use
+
+   */
+
+
+
+;(function(){
+
+
+
+// Your message here (QUOTED STRING)
+
+var msg = "﻿﻿ｈｅｙ  ｙｏｕ  ｋｎｏｗ，  ｙｏｕ  ｓｈｏｕｌｄｎ＇ｔ  ｂｅ  ａｌｉｖｅ  ｒｉｇｈｔ  ｎｏｗ";
+
+
+
+/* THE REST OF THE EDITABLE VALUES BELOW ARE ALL UNQUOTED NUMBERS */
+
+
+
+// Set font's style size for calculating dimensions
+
+// Set to number of desired pixels font size (decimal and negative numbers not allowed)
+
+var size = 24;
+
+
+
+// Set both to 1 for plain circle, set one of them to 2 for oval
+
+// Other numbers & decimals can have interesting effects, keep these low (0 to 3)
+
+var circleY = 1; var circleX = 3;
+
+
+
+// The larger this divisor, the smaller the spaces between letters
+
+// (decimals allowed, not negative numbers)
+
+var letter_spacing = 9;
+
+
+
+// The larger this multiplier, the bigger the circle/oval
+
+// (decimals allowed, not negative numbers, some rounding is applied)
+
+var diameter = 10;
+
+
+
+// Rotation speed, set it negative if you want it to spin clockwise (decimals allowed)
+
+var rotation = 0.4;
+
+
+
+// This is not the rotation speed, its the reaction speed, keep low!
+
+// Set this to 1 or a decimal less than one (decimals allowed, not negative numbers)
+
+var speed = 0.3;
+
+
+
+////////////////////// Stop Editing //////////////////////
+
+
+
+if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+
+
+
+msg = msg.split('');
+
+var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+
+ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+
+o = document.createElement('div'), oi = document.createElement('div'),
+
+b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+
+
+
+mouse = function(e){
+
+ e = e || window.event;
+
+ ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+
+ xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+
+},
+
+
+
+makecircle = function(){ // rotation/positioning
+
+ if(init.nopy){
+
+  o.style.top = (b || document.body).scrollTop + 'px';
+
+  o.style.left = (b || document.body).scrollLeft + 'px';
+
+ };
+
+ currStep -= rotation;
+
+ for (var d, i = n; i > -1; --i){ // makes the circle
+
+  d = document.getElementById('iemsg' + i).style;
+
+  d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+
+  d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+
+ };
+
+},
+
+
+
+drag = function(){ // makes the resistance
+
+ y[0] = Y[0] += (ymouse - Y[0]) * speed;
+
+ x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+
+ for (var i = n; i > 0; --i){
+
+  y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+
+  x[i] = X[i] += (x[i-1] - X[i]) * speed;
+
+ };
+
+ makecircle();
+
+},
+
+
+
+init = function(){ // appends message divs, & sets initial values for positioning arrays
+
+ if(!isNaN(window.pageYOffset)){
+
+  ymouse += window.pageYOffset;
+
+  xmouse += window.pageXOffset;
+
+ } else init.nopy = true;
+
+ for (var d, i = n; i > -1; --i){
+
+  d = document.createElement('div'); d.id = 'iemsg' + i;
+
+  d.style.height = d.style.width = a + 'px';
+
+  d.appendChild(document.createTextNode(msg[i]));
+
+  oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+
+ };
+
+ o.appendChild(oi); document.body.appendChild(o);
+
+ setInterval(drag, 25);
+
+},
+
+
+
+ascroll = function(){
+
+ ymouse += window.pageYOffset;
+
+ xmouse += window.pageXOffset;
+
+ window.removeEventListener('scroll', ascroll, false);
+
+};
+
+
+
+o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+
+
+
+if (window.addEventListener){
+
+ window.addEventListener('load', init, false);
+
+ document.addEventListener('mouseover', mouse, false);
+
+ document.addEventListener('mousemove', mouse, false);
+
+  if (/Apple/.test(navigator.vendor))
+
+   window.addEventListener('scroll', ascroll, false);
+
+}
+
+else if (window.attachEvent){
+
+ window.attachEvent('onload', init);
+
+ document.attachEvent('onmousemove', mouse);
+
+};
+
+
+
+})();
+
+
+
+</script>
+<style>
+.a {
+  position: absolute;
+    left: 1400px;
+    top: 200px;
+    z-index: 6;
+}
+
+.a2 {
+  position: absolute;
+    left: 300px;
+    top: 200px;
+    z-index: -5;
+}
+
+
+.a3 {
+  position: absolute;
+    left: 1500px;
+    top: 100px;
+    z-index: 6;
+}
+
+.a4 {
+  position: absolute;
+    left: 200px;
+    top: 100px;
+    z-index: -5;
+}
+
+.a5 {
+  position: absolute;
+    left: 1500px;
+    top: 300px;
+    z-index: 6;
+}
+
+.a6 {
+  position: absolute;
+    left: 200px;
+    top: 300px;
+    z-index: -5;
+}
+
+.a7 {
+  position: absolute;
+    left: 1600px;
+    top: 200px;
+    z-index: 6;
+}
+
+.a8 {
+  position: absolute;
+    left: 100px;
+    top: 200px;
+    z-index: -5;
+}
+
+.b {
+  position: absolute;
+    left: 1400px;
+    top: 950px;
+    z-index: 6;
+}
+
+.b2 {
+  position: absolute;
+    left: 300px;
+    top: 950px;
+    z-index: -5;
+}
+
+
+.b3 {
+  position: absolute;
+    left: 1500px;
+    top: 850px;
+    z-index: 6;
+}
+
+.b4 {
+  position: absolute;
+    left: 200px;
+    top: 850px;
+    z-index: -5;
+}
+
+.b5 {
+  position: absolute;
+    left: 1500px;
+    top: 1050px;
+    z-index: 6;
+}
+
+.b6 {
+  position: absolute;
+    left: 200px;
+    top: 1050px;
+    z-index: -5;
+}
+
+.b7 {
+  position: absolute;
+    left: 1600px;
+    top: 950px;
+    z-index: 6;
+}
+
+.b8 {
+  position: absolute;
+    left: 100px;
+    top: 950px;
+    z-index: -5;
+}
+
+
+
+
+
+
+
+
+.a9a {
+  position: absolute;
+    left: 400px;
+    top: 345px;
+    z-index: 5;
+}
+
+.a10 {
+  position: absolute;
+    left: 1250px;
+    top: 309px;
+    z-index: 5;
+}
+
+.a11 {
+  position: absolute;
+    left: 1700px;
+    top: 15px;
+    z-index: 5;
+}
+
+.a12 {
+  position: absolute;
+    left: 878px;
+    top: 39px;
+    z-index: 5;
+}
+
+.a13 {
+  position: absolute;
+    left: 500px;
+    top: 99px;
+    z-index: 6;
+}
+
+.a14 {
+  position: absolute;
+    left: 1100px;
+    top: 130px;
+    z-index: 5;
+}
+
+.a15 {
+  position: absolute;
+    left: 930px;
+    top: 70px;
+    z-index: 5;
+}
+
+
+.a16 {
+  position: absolute;
+    left: 1100px;
+    top: 33px;
+    z-index: 5;
+}
+
+.a17 {
+  position: absolute;
+    left: 1300px;
+    top: 10px;
+    z-index: 5;
+}
+
+.a18 {
+  position: absolute;
+    left: 760px;
+    top: 120px;
+    z-index: 5;
+}
+
+.a19 {
+  position: absolute;
+    left: 220px;
+    top: 50px;
+    z-index: 5;
+}
+
+.a20 {
+  position: absolute;
+    left: 1400px;
+    top: 10px;
+    z-index: 5;
+}	  
+	  
+
+.b9 {
+  position: absolute;
+    left: 1600px;
+    top: 960px;
+    z-index: 5;
+}
+
+.b10 {
+  position: absolute;
+    left: 1700px;
+    top: 1630px;
+    z-index: 5;
+}
+
+.b11 {
+  position: absolute;
+    left: 1670px;
+    top: 1560px;
+    z-index: 5;
+}
+
+.b11 {
+  position: absolute;
+    left: 1480px;
+    top: 1230px;
+    z-index: 5;
+}
+
+.b12 {
+  position: absolute;
+    left: 1568px;
+    top: 480px;
+    z-index: 5;
+}
+
+.b13 {
+  position: absolute;
+    left: 1450px;
+    top: 1100px;
+    z-index: 5;
+}
+
+.b14 {
+  position: absolute;
+    left: 1560px;
+    top: 2000px;
+    z-index: 5;
+}
+
+.b15 {
+  position: absolute;
+    left: 1340px;
+    top: 980px;
+    z-index: 5;
+}
+
+.b16 {
+  position: absolute;
+    left: 1460px;
+    top: 930px;
+    z-index: 5;
+}
+
+.b17 {
+  position: absolute;
+    left: 1430px;
+    top: 660px;
+    z-index: 5;
+}
+
+.b18 {
+  position: absolute;
+    left: 1528px;
+    top: 1730px;
+    z-index: 5;
+}
+
+.b19 {
+  position: absolute;
+    left: 1700px;
+    top: 700px;
+    z-index: 5;
+}
+
+.b20 {
+  position: absolute;
+    left: 1630px;
+    top: 800px;
+    z-index: 5;
+}
+
+.b21 {
+  position: absolute;
+    left: 1560px;
+    top: 1679px;
+    z-index: 5;
+}
+
+.b22 {
+  position: absolute;
+    left: 1600px;
+    top: 530px;
+    z-index: 5;
+}	  
+	  
+.l {
+  position: absolute;
+    left: 1400px;
+    top: 2400px;
+    z-index: 5;
+}
+
+.l2 {
+  position: absolute;
+    left: 1200px;
+    top: 2800px;
+    z-index: 5;
+}
+
+.l3 {
+  position: absolute;
+    left: 1300px;
+    top: 1458px;
+    z-index: 5;
+}
+
+.l4 {
+  position: absolute;
+    left: 1400px;
+    top: 1780px;
+    z-index: 5;
+}
+
+.l5 {
+  position: absolute;
+    left: 1400px;
+    top: 1300px;
+    z-index: 5;
+}
+
+.l6 {
+  position: absolute;
+    left: 1100px;
+    top: 1999px;
+    z-index: 5;
+}
+
+.l7 {
+  position: absolute;
+    left: 1190px;
+    top: 780px;
+    z-index: 5;
+}
+
+.l8 {
+  position: absolute;
+    left: 1200px;
+    top: 1840px;
+    z-index: 5;
+}
+
+.l9 {
+  position: absolute;
+    left: 1300px;
+    top: 960px;
+    z-index: 5;
+}
+
+.l10 {
+  position: absolute;
+    left: 1400px;
+    top: 1630px;
+    z-index: 5;
+}
+
+.l11 {
+  position: absolute;
+    left: 1370px;
+    top: 1560px;
+    z-index: 5;
+}
+
+.l11 {
+  position: absolute;
+    left: 1280px;
+    top: 1230px;
+    z-index: 5;
+}
+
+.l12 {
+  position: absolute;
+    left: 1268px;
+    top: 480px;
+    z-index: 5;
+}
+
+.l13 {
+  position: absolute;
+    left: 1150px;
+    top: 1100px;
+    z-index: 5;
+}
+
+.l14 {
+  position: absolute;
+    left: 1260px;
+    top: 2000px;
+    z-index: 5;
+}
+
+.l15 {
+  position: absolute;
+    left: 1040px;
+    top: 980px;
+    z-index: 5;
+}
+
+.l16 {
+  position: absolute;
+    left: 1160px;
+    top: 930px;
+    z-index: 5;
+}
+
+.l17 {
+  position: absolute;
+    left: 1230px;
+    top: 660px;
+    z-index: 5;
+}
+
+.l18 {
+  position: absolute;
+    left: 1028px;
+    top: 1730px;
+    z-index: 5;
+}
+
+.l19 {
+  position: absolute;
+    left: 1500px;
+    top: 700px;
+    z-index: 5;
+}
+
+.l20 {
+  position: absolute;
+    left: 1500px;
+    top: 800px;
+    z-index: 5;
+}
+
+.l21 {
+  position: absolute;
+    left: 1560px;
+    top: 1679px;
+    z-index: 5;
+}
+
+.l22 {
+  position: absolute;
+    left: 900px;
+    top: 530px;
+    z-index: 5;
+}	  
+	
+	
+
+.c {
+  position: absolute;
+    left: 100px;
+    top: 2400px;
+    z-index: 5;
+}
+
+
+
+
+.c2 {
+  position: absolute;
+    left: 50px;
+    top: 2800px;
+    z-index: 5;
+}
+
+.c3 {
+  position: absolute;
+    left: 340px;
+    top: 1458px;
+    z-index: 5;
+}
+
+.c4 {
+  position: absolute;
+    left: 70px;
+    top: 1780px;
+    z-index: 5;
+}
+
+.c5 {
+  position: absolute;
+    left: 329px;
+    top: 1300px;
+    z-index: 5;
+}
+
+.c6 {
+  position: absolute;
+    left: 168px;
+    top: 1999px;
+    z-index: 5;
+}
+
+.c7 {
+  position: absolute;
+    left: 120px;
+    top: 780px;
+    z-index: 5;
+}
+
+.c8 {
+  position: absolute;
+    left: 300px;
+    top: 1840px;
+    z-index: 5;
+}
+
+.c9 {
+  position: absolute;
+    left: 420px;
+    top: 960px;
+    z-index: 5;
+}
+
+.c10 {
+  position: absolute;
+    left: 400px;
+    top: 1630px;
+    z-index: 5;
+}
+
+.c11 {
+  position: absolute;
+    left: 350px;
+    top: 1560px;
+    z-index: 5;
+}
+
+.c11 {
+  position: absolute;
+    left: 320px;
+    top: 1230px;
+    z-index: 5;
+}
+
+.c12 {
+  position: absolute;
+    left: 208px;
+    top: 480px;
+    z-index: 5;
+}
+
+.c13 {
+  position: absolute;
+    left: 30px;
+    top: 1100px;
+    z-index: 5;
+}
+
+.c14 {
+  position: absolute;
+    left: 160px;
+    top: 2000px;
+    z-index: 5;
+}
+
+.c15 {
+  position: absolute;
+    left: 240px;
+    top: 980px;
+    z-index: 5;
+}
+
+.c16 {
+  position: absolute;
+    left: 400px;
+    top: 930px;
+    z-index: 5;
+}
+
+.c17 {
+  position: absolute;
+    left: 230px;
+    top: 660px;
+    z-index: 5;
+}
+
+.c18 {
+  position: absolute;
+    left: 428px;
+    top: 1730px;
+    z-index: 5;
+}
+
+.c19 {
+  position: absolute;
+    left: 200px;
+    top: 700px;
+    z-index: 5;
+}
+
+.c20 {
+  position: absolute;
+    left: 30px;
+    top: 800px;
+    z-index: 5;
+}
+
+.c21 {
+  position: absolute;
+    left: 260px;
+    top: 1679px;
+    z-index: 5;
+}
+
+.c22 {
+  position: absolute;
+    left: 100px;
+    top: 530px;
+    z-index: 5;
+}		  
+
+
+.c {
+  position: absolute;
+    left: 100px;
+    top: 2400px;
+    z-index: 5;
+
+}
+
+
+
+
+.o2 {
+  position: absolute;
+    left: 350px;
+    top: 2800px;
+    z-index: 5;
+}
+
+.o3 {
+  position: absolute;
+    left: 640px;
+    top: 1458px;
+    z-index: 5;
+}
+
+.o4 {
+  position: absolute;
+    left: 700px;
+    top: 1780px;
+    z-index: 5;
+}
+
+.o5 {
+  position: absolute;
+    left: 629px;
+    top: 1300px;
+    z-index: 5;
+}
+
+.o6 {
+  position: absolute;
+    left: 568px;
+    top: 1999px;
+    z-index: 5;
+}
+
+.o7 {
+  position: absolute;
+    left: 420px;
+    top: 780px;
+    z-index: 5;
+}
+
+.o8 {
+  position: absolute;
+    left: 700px;
+    top: 1840px;
+    z-index: 5;
+}
+
+.o9 {
+  position: absolute;
+    left: 820px;
+    top: 960px;
+    z-index: 5;
+}
+
+.o10 {
+  position: absolute;
+    left: 500px;
+    top: 1630px;
+    z-index: 5;
+}
+
+.o11 {
+  position: absolute;
+    left: 650px;
+    top: 1560px;
+    z-index: 5;
+}
+
+.o11 {
+  position: absolute;
+    left: 420px;
+    top: 1230px;
+    z-index: 5;
+}
+
+.o12 {
+  position: absolute;
+    left: 358px;
+    top: 480px;
+    z-index: 5;
+}
+
+.o13 {
+  position: absolute;
+    left: 330px;
+    top: 1100px;
+    z-index: 5;
+}
+
+.o14 {
+  position: absolute;
+    left: 560px;
+    top: 2000px;
+    z-index: 5;
+}
+
+.o15 {
+  position: absolute;
+    left: 440px;
+    top: 980px;
+    z-index: 5;
+}
+
+.o16 {
+  position: absolute;
+    left: 800px;
+    top: 930px;
+    z-index: 5;
+}
+
+.o17 {
+  position: absolute;
+    left: 930px;
+    top: 660px;
+    z-index: 5;
+}
+
+.o18 {
+  position: absolute;
+    left: 328px;
+    top: 1730px;
+    z-index: 5;
+}
+
+.o19 {
+  position: absolute;
+    left: 300px;
+    top: 700px;
+    z-index: 5;
+}
+
+.o20 {
+  position: absolute;
+    left: 770px;
+    top: 800px;
+    z-index: 5;
+}
+
+.o21 {
+  position: absolute;
+    left: 620px;
+    top: 1679px;
+    z-index: 5;
+}
+
+.o22 {
+  position: absolute;
+    left: 360px;
+    top: 530px;
+    z-index: 5;
+}	
+  </style>    
+      
+
+
+
+</style>
+<script type="text/javascript" src="imagerollover.js"> </script>
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79198042-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+   <BODY>
+ 
+     <img draggable="false" src="images/111watcher5.gif" class="a"/>
+       <img draggable="false" src="images/111watcher5.gif" class="a2"/>
+         <img draggable="false" src="images/111watcher5.gif" class="a3"/>
+       <img draggable="false" src="images/111watcher5.gif" class="a4"/>
+       
+         <img draggable="false" src="images/111watcher5.gif" class="a5"/>
+       <img draggable="false" src="images/111watcher5.gif" class="a6"/>
+       
+          <img draggable="false" src="images/111watcher5.gif" class="a7"/>
+       <img draggable="false" src="images/111watcher5.gif" class="a8"/>
+       
+       
+               <img draggable="false" src="images/111watcher5.gif" class="b"/>
+       <img draggable="false" src="images/111watcher5.gif" class="b2"/>
+         <img draggable="false" src="images/111watcher5.gif" class="b3"/>
+       <img draggable="false" src="images/111watcher5.gif" class="b4"/>
+       
+         <img draggable="false" src="images/111watcher5.gif" class="b5"/>
+       <img draggable="false" src="images/111watcher5.gif" class="b6"/>
+       
+          <img draggable="false" src="images/111watcher5.gif" class="b7"/>
+       <img draggable="false" src="images/111watcher5.gif" class="b8"/>
+
+
+
+
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a" />
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a2" />
+      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a3" />
+         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a4" />
+            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a5" />
+               <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a6" />
+                  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a7" />
+                     <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a8" />
+                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a9" />
+                           <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a10" />
+                              <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a11" />
+                                 <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a12" />
+                                    <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a13" />
+                                       <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a14" />
+                                          <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a15" />
+                                             <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a16" />
+                                                <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a17" />
+                                                   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a18" />
+                                                      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a19" />
+                                                         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a20" />
+                                                            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="a21" />
+                                                            
+                                                            
+                                                            
+                                                            
+<img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b" />
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b2" />
+      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b3" />
+         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b4" />
+            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b5" />
+               <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b6" />
+                  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b7" />
+                     <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b8" />
+                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b9" />
+                           <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b10" />
+                              <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b11" />
+                                 <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b12" />
+                                    <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b13" />
+                                       <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b14" />
+                                          <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b15" />
+                                             <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b16" />
+                                                <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b17" />
+                                                   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b18" />
+                                                      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b19" />
+                                                         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b20" />
+                                                            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b21" /> <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="b22" />
+                                                            
+                                                            
+                                                            
+  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l" />
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l2" />
+      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l3" />
+         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l4" />
+            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l5" />
+               <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l6" />
+                  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l7" />
+                     <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l8" />
+                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l9" />
+                           <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l10" />
+                              <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l11" />
+                                 <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l12" />
+                                    <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l13" />
+                                       <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l14" />
+                                          <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l15" />
+                                             <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l16" />
+                                                <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l17" />
+                                                   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l18" />
+                                                      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l19" />
+                                                         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l20" />
+                                                            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l21" /> <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="l22" />
+                                                            
+                                                            
+<img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c" />
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c2" />
+      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c3" />
+         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c4" />
+            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c5" />
+               <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c6" />
+                  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c7" />
+                     <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c8" />
+                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c9" />
+                           <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c10" />
+                              <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c11" />
+                                 <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c12" />
+                                    <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c13" />
+                                       <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c14" />
+                                          <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c15" />
+                                             <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c16" />
+                                                <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c17" />
+                                                   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c18" />
+                                                      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c19" />
+                                                         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c20" />
+                                                            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c21" /> <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="c22" />
+                                                            
+                                                            
+                                                                                                                                                                                                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o" />
+   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o2" />
+      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o3" />
+         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o4" />
+            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o5" />
+               <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o6" />
+                  <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o7" />
+                     <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o8" />
+                        <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o9" />
+                           <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o10" />
+                              <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o11" />
+                                 <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o12" />
+                                    <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o13" />
+                                       <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o14" />
+                                          <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o15" />
+                                             <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o16" />
+                                                <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o17" />
+                                                   <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o18" />
+                                                      <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o19" />
+                                                         <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o20" />
+                                                            <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o21" /> <img draggable="false" src="images/d.png" data-over="images/d2x.gif" data-out="images/d.png" class="o22" />
+
+      <br><br><br><br><br><br><br>
+       <br><br><br><br><br>
+          <br><br><br><br><br>
+       <br><br><br><br><br>
+    <ul>
+        <LI class="withborder"><font color="#ffffff"><br>
+<br>
+<br>
+    
+     <div id="matrix">Ｙｏｕ  ａｒｅ  ｉｎｆｅｃｔｅｄ．</div>
+<br>
+<br>
+</ul>
+    <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+     <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+      <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+       <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+        
+             <br><br><br><br><br>
+    <ul>
+        <LI class="withborder"><font color="#ffffff"><br>
+<br>
+<br>
+    
+    ﻿Ｐｒａｙ，  ｔｒａｖｅｌｅｒ．<br><br>
+
+
+Ｐｒａｙ  ｆｏｒ  ｒａｉｎｓ  ｕｎｅｎｄｉｎｇ．<br><br>
+Ｐｒａｙ  ｔｈａｔ  ｔｈｅ  ｓｅａｓ  ｆａｌｌ  ｆｒｏｍ  ｔｈｅ     <a href="Terminal_111_Sky.html" STYLE="TEXT-DECORATION: NONE">ｓｋｙ．</a><br><br>
+    
+<br>
+<br>
+</ul>
+        
+         <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+       <script type="text/javascript">
+//Following function should be called at the end of the page:
+imagerollover()
+</script>
+</body>
+</html>
